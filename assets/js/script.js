@@ -44,7 +44,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             } else {
-                document.getElementById('question-section').innerHTML = '<h3>Congratulations ' + name + '! You have completed the game!</h3>';
+                document.getElementById('question-section').innerHTML = `
+                    <h3>Congratulations ${name}! You have completed the game!</h3>
+                    <button class="btn btn-primary btn-lg mt-2" id="play-again">Play Again</button>
+                    <button class="btn btn-secondary btn-lg mt-2" id="restart">Restart with New Name</button>
+                `;
+                document.getElementById('play-again').addEventListener('click', function() {
+                    startGame(name);
+                });
+                document.getElementById('restart').addEventListener('click', function() {
+                    document.getElementById('game-section').classList.add('d-none');
+                    document.getElementById('name-input-section').classList.remove('d-none');
+                    document.getElementById('kid-name').value = '';
+                });
             }
         }
 
