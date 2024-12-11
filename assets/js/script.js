@@ -80,6 +80,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         document.getElementById('game-section').classList.add('d-none');
                         document.getElementById('name-input-section').classList.remove('d-none');
                         document.getElementById('kid-name').value = '';
+                        currentLevel = 1; // Reset current level
+                        currentQuestionIndex = 0; // Reset current question index
+                        progress = 0; // Reset progress
+                        document.getElementById('progress-bar').style.width = progress + '%'; // Reset progress bar
+                        document.getElementById('level-label').innerText = 'Level 1'; // Reset level label
                     });
                 }
             }
