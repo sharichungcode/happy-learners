@@ -21,11 +21,32 @@
         </div>
         <div id="game-section" class="d-none">
             <h2 id="greeting" class="text-center"></h2>
+            <h3 id="level-label" class="text-center">Level 1</h3>
             <div id="question-section">
                 <!-- Questions will be dynamically inserted here -->
             </div>
             <div class="progress mt-3">
                 <div class="progress-bar" role="progressbar" style="width: 0%;" id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for level transition -->
+    <div class="modal fade" id="levelModal" tabindex="-1" aria-labelledby="levelModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="levelModalLabel">Great Job!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    You have completed this level. Get ready for the next level!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="next-level">Next Level</button>
+                </div>
             </div>
         </div>
     </div>
