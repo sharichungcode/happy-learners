@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         document.getElementById('progress-bar').style.width = progress + '%';
                         document.getElementById('level-label').innerText = 'Level ' + currentLevel;
                         showQuestion();
-                    });
+                    }, { once: true }); // Ensure the event listener is added only once
                 } else {
                     document.getElementById('question-section').innerHTML = `
                         <h3>Congratulations ${name}! You have completed all levels!</h3>
